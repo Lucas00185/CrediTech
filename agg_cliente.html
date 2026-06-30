@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agregar Cliente</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+
+    <style>
+      body {
+        min-height: 100vh;
+        background: linear-gradient(135deg, #194e9e, #1ecee6);
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 40px 0;
+      }
+
+      .card {
+        border: none;
+        border-radius: 20px;
+        overflow: hidden;
+      }
+
+      .card-body {
+        padding: 35px;
+      }
+
+      .logo {
+        width: 120px;
+        margin-bottom: 15px;
+      }
+
+      .titulo {
+        text-align: center;
+        color: #194e9e;
+        font-weight: bold;
+        margin-bottom: 25px;
+      }
+
+      /* Cabecera de sección */
+      .seccion-header {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background: linear-gradient(135deg, #194e9e, #1ecee6);
+        color: white;
+        border-radius: 12px;
+        padding: 10px 18px;
+        margin-bottom: 20px;
+        font-weight: bold;
+        font-size: 15px;
+      }
+
+      .seccion-header i {
+        font-size: 18px;
+      }
+
+      .form-control,
+      .form-select {
+        border-radius: 10px;
+        height: 45px;
+      }
+
+      .btn {
+        border-radius: 10px;
+        font-weight: bold;
+        padding: 10px;
+        transition: 0.3s;
+      }
+
+      .btn-primary:hover {
+        background-color: #0d47a1;
+      }
+      .btn-danger:hover {
+        background-color: #b71c1c;
+      }
+
+      /* Separador visual entre secciones */
+      .seccion-bloque {
+        background-color: #f8f9fa;
+        border-radius: 15px;
+        padding: 20px 20px 5px 20px;
+        margin-bottom: 25px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <div class="card shadow-lg">
+            <div class="card-body">
+              <!-- Logo -->
+              <div class="text-center">
+                <img
+                  src="./imagenes/creditech_logo.png"
+                  alt="Logo"
+                  class="logo"
+                />
+              </div>
+
+              <!-- Título -->
+              <h3 class="titulo">
+                <i class="bi bi-person-plus-fill"></i>
+                Agregar Cliente
+              </h3>
+
+              <form>
+                <!-- ── SECCIÓN 1: Datos Personales ── -->
+                <div class="seccion-bloque">
+                  <div class="seccion-header">
+                    <i class="bi bi-person-vcard-fill"></i>
+                    Datos Personales
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-6 mb-3">
+                      <label class="form-label"
+                        >Nombre <span class="text-danger">*</span></label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Ingrese nombre"
+                        required
+                      />
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                      <label class="form-label"
+                        >Apellido <span class="text-danger">*</span></label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Ingrese apellido"
+                        required
+                      />
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                      <label class="form-label"
+                        >Cédula <span class="text-danger">*</span></label
+                      >
+                      <input
+                        type="number"
+                        class="form-control"
+                        placeholder="Ingrese número de cédula"
+                        required
+                      />
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                      <label class="form-label"
+                        >Teléfono <span class="text-danger">*</span></label
+                      >
+                      <input
+                        type="tel"
+                        class="form-control"
+                        placeholder="Ej: 0981 123 456"
+                        required
+                      />
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                      <label class="form-label">Dirección</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Ingrese dirección"
+                      />
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                      <label class="form-label">Email</label>
+                      <input
+                        type="email"
+                        class="form-control"
+                        placeholder="Ingrese correo electrónico"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ── SECCIÓN 2: Datos Laborales ── -->
+                <div class="seccion-bloque">
+                  <div class="seccion-header">
+                    <i class="bi bi-briefcase-fill"></i>
+                    Datos Laborales
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-6 mb-3">
+                      <label class="form-label">Empresa / Empleador</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Nombre de la empresa"
+                      />
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                      <label class="form-label">Cargo / Ocupación</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Ej: Administrativo, Docente..."
+                      />
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                      <label class="form-label"
+                        >Salario Mensual (Gs.)
+                        <span class="text-danger">*</span></label
+                      >
+                      <input
+                        type="number"
+                        class="form-control"
+                        placeholder="Ingrese salario en guaraníes"
+                        required
+                      />
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                      <label class="form-label">Antigüedad laboral</label>
+                      <select class="form-select">
+                        <option value="">Seleccionar</option>
+                        <option>Menos de 6 meses</option>
+                        <option>6 meses a 1 año</option>
+                        <option>1 a 3 años</option>
+                        <option>Más de 3 años</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Botones -->
+                <div class="d-flex justify-content-between">
+                  <a href="clientes.html" class="btn btn-danger">
+                    <i class="bi bi-x-circle"></i>
+                    Cancelar
+                  </a>
+
+                  <button type="submit" class="btn btn-primary">
+                    <i class="bi bi-check-circle"></i>
+                    Agregar Cliente
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

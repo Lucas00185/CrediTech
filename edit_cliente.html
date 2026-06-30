@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Editar Cliente</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+
+    <style>
+      body {
+        min-height: 100vh;
+        background: linear-gradient(135deg, #194e9e, #1ecee6);
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 40px 0;
+      }
+
+      .card {
+        border: none;
+        border-radius: 20px;
+        overflow: hidden;
+      }
+
+      .card-body {
+        padding: 35px;
+      }
+
+      .logo {
+        width: 120px;
+        margin-bottom: 15px;
+      }
+
+      .titulo {
+        text-align: center;
+        color: #194e9e;
+        font-weight: bold;
+        margin-bottom: 25px;
+      }
+
+      .seccion-header {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background: linear-gradient(135deg, #194e9e, #1ecee6);
+        color: white;
+        border-radius: 12px;
+        padding: 10px 18px;
+        margin-bottom: 20px;
+        font-weight: bold;
+        font-size: 15px;
+      }
+
+      .seccion-header i {
+        font-size: 18px;
+      }
+
+      .form-control,
+      .form-select {
+        border-radius: 10px;
+        height: 45px;
+      }
+
+      .btn {
+        border-radius: 10px;
+        font-weight: bold;
+        padding: 10px;
+        transition: 0.3s;
+      }
+
+      .btn-warning:hover {
+        background-color: #e65100;
+      }
+      .btn-danger:hover {
+        background-color: #b71c1c;
+      }
+
+      .seccion-bloque {
+        background-color: #f8f9fa;
+        border-radius: 15px;
+        padding: 20px 20px 5px 20px;
+        margin-bottom: 25px;
+      }
+
+      /* Badge de ID en el título */
+      .badge-id {
+        background-color: #e8f0fe;
+        color: #194e9e;
+        border-radius: 8px;
+        padding: 4px 12px;
+        font-size: 13px;
+        font-weight: normal;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <div class="card shadow-lg">
+            <div class="card-body">
+              <!-- Logo -->
+              <div class="text-center">
+                <img
+                  src="./imagenes/creditech_logo.png"
+                  alt="logo"
+                  height="100"
+                />
+              </div>
+
+              <!-- Título -->
+              <h3 class="titulo">
+                <i class="bi bi-pencil-square"></i>
+                Editar Cliente
+                <span class="badge-id ms-2">ID #1</span>
+              </h3>
+
+              <form>
+                <!-- ── SECCIÓN 1: Datos Personales ── -->
+                <div class="seccion-bloque">
+                  <div class="seccion-header">
+                    <i class="bi bi-person-vcard-fill"></i>
+                    Datos Personales
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-6 mb-3">
+                      <label class="form-label"
+                        >Nombre <span class="text-danger">*</span></label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        value="Juan"
+                        required
+                      />
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                      <label class="form-label"
+                        >Apellido <span class="text-danger">*</span></label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        value="Pérez"
+                        required
+                      />
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                      <label class="form-label"
+                        >Cédula <span class="text-danger">*</span></label
+                      >
+                      <input
+                        type="number"
+                        class="form-control"
+                        value="1234567"
+                        required
+                      />
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                      <label class="form-label"
+                        >Teléfono <span class="text-danger">*</span></label
+                      >
+                      <input
+                        type="tel"
+                        class="form-control"
+                        value="0981 123 456"
+                        required
+                      />
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                      <label class="form-label">Dirección</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        value="San Lorenzo"
+                      />
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                      <label class="form-label">Email</label>
+                      <input
+                        type="email"
+                        class="form-control"
+                        value="juan@email.com"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ── SECCIÓN 2: Datos Laborales ── -->
+                <div class="seccion-bloque">
+                  <div class="seccion-header">
+                    <i class="bi bi-briefcase-fill"></i>
+                    Datos Laborales
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-6 mb-3">
+                      <label class="form-label">Empresa / Empleador</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        value="CrediTech S.A."
+                      />
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                      <label class="form-label">Cargo / Ocupación</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        value="Administrativo"
+                      />
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                      <label class="form-label"
+                        >Salario Mensual (Gs.)
+                        <span class="text-danger">*</span></label
+                      >
+                      <input
+                        type="number"
+                        class="form-control"
+                        value="3500000"
+                        required
+                      />
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                      <label class="form-label">Antigüedad laboral</label>
+                      <select class="form-select">
+                        <option>Menos de 6 meses</option>
+                        <option>6 meses a 1 año</option>
+                        <option selected>1 a 3 años</option>
+                        <option>Más de 3 años</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Botones -->
+                <div class="d-flex justify-content-between">
+                  <a href="clientes.html" class="btn btn-danger">
+                    <i class="bi bi-x-circle"></i>
+                    Cancelar
+                  </a>
+
+                  <button type="submit" class="btn btn-warning text-white">
+                    <i class="bi bi-save-fill"></i>
+                    Guardar Cambios
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
